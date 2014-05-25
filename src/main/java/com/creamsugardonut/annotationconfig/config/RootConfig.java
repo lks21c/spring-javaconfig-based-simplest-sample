@@ -13,20 +13,5 @@ import org.springframework.core.io.Resource;
  */
 @Configuration
 public class RootConfig {
-    
 
-    private static final String APP_CONFIG_FILE_PATH = "application.xml";
-
-    /**
-     * 프로퍼티 홀더는 다른 빈들이 사용하는 프로퍼티들을 로딩하기 때문에, static 메소드로 실행된다.
-     * 다른 일반 빈들이 만들어지기전에 먼저 만들어져야 한다.
-     * @return
-     */
-    @Bean
-    public /* static 메소드에요! */ static PropertyPlaceholderConfigurer propertyPlaceholderConfigurer()
-    {
-        PropertyPlaceholderConfigurer ppc = new PropertyPlaceholderConfigurer();
-        ppc.setLocations(new Resource[] { new ClassPathResource(APP_CONFIG_FILE_PATH) });
-        return ppc;
-    }
 }
