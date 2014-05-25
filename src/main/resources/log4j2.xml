@@ -6,7 +6,7 @@
         </Console>
     </Appenders>
     <Loggers>
-        <logger name="com.leeks.batch.joonggonara.dao" level="trace">
+        <logger name="com.creamsugardonut.annotationconfig" level="trace">
         </logger>
         <Root level="debug">
             <AppenderRef ref="console"/>
